@@ -28,7 +28,7 @@ public class EmployeeTest {
 
 class Employee
 {
-    private String name;
+    private String name = "test";
     private double salary;
     private LocalDate hireDay;
 
