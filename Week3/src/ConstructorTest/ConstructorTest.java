@@ -29,6 +29,7 @@ class Employee
     private double salary;
 
     // static initialization block
+    // 静态属性的初始化区域，想要给静态属性初始化就用这样的块 statid{ TODO; }
     static
     {
         Random generator = new Random();
@@ -37,12 +38,14 @@ class Employee
     }
 
     // object initialization block
+    // 也可以在这里初始化非静态的属性，这个代码块的优点就是可以写代码，进行一些运算，然后赋值
     {
         id = nextId;
         nextId++;
     }
 
     // three overloaded constructors
+    // 有多个构造方法就叫重载
     public Employee(String n, double s)
     {
         name = n;
@@ -52,6 +55,7 @@ class Employee
     public Employee(double s)
     {
         // calls the Employee(String , double) constructor
+        // 使用this（）来调用其他的构造方法
         this("Employee #"+ nextId, s);
     }
 

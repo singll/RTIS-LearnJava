@@ -25,6 +25,7 @@ public class StaticTest {
 
 class Employee
 {
+    // 静态属性，这个属性属于类，正常的属性是每个对象都有自己的一份不同属性，当对象更改自己的属性的值的时候不会影响到其他对象，但是静态属性是所有对象共用一个，当某个对象调用方法或直接更改静态属性的时候，所有的对象访问这个属性就会发现都发生改变了
     private static int nextId = 1;
 
     private String name;
@@ -59,6 +60,7 @@ class Employee
         nextId++;
     }
 
+    // 静态方法，也是属于类，调用方式是 类名.静态方法名（参数）   比如 Employee.getNextId()  ，而且不可以用对象调用
     public static int getNextId()
     {
         return nextId;  // returns static field
